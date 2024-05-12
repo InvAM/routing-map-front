@@ -1,133 +1,65 @@
 <template>
-	<v-container>
-		<v-row class="text-center">
-			<v-col cols="12">
+	<div class="fondo_login">
+		<v-sheet
+			class="mx-auto pt-10 pl-10 pr-10 pb-10 form-login"
+			width="450"
+			height="400">
+			<v-form fast-fail @submit.prevent>
 				<v-img
-					:src="require('../assets/logo.svg')"
-					class="my-3"
-					contain
-					height="200" />
-			</v-col>
+					class="mx-auto my-6"
+					max-width="228"
+					src="https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-v3-slim-text-light.svg"></v-img>
+				<v-card
+					class="mx-auto pa-12 pb-8"
+					elevation="8"
+					max-width="500"
+					rounded="lg"
+					max-height="500"
+					height="300"
+					color="#262626">
+					<v-text-field label="Nombre usuario"></v-text-field>
 
-			<v-col class="mb-5">
-				<h1 class="display-2 font-weight-bold mb-3">
-					Bienvenido al curso de Sistemas Inteligentes
-				</h1>
+					<v-text-field
+						v-model="password"
+						:append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+						:rules="[rules.required]"
+						:type="show1 ? 'text' : 'password'"
+						hint="At least 8 characters"
+						label="Normal with hint text"
+						name="input-10-1"
+						counter
+						@click:append="show1 = !show1"></v-text-field>
 
-				<p class="subheading font-weight-regular">
-					For help and collaboration with other Vuetify developers,
-					<br />please join our online
-					<a href="https://community.vuetifyjs.com" target="_blank"
-						>Discord Community</a
+					<v-btn class="mt-2" type="submit" block style="color: black"
+						>Submit</v-btn
 					>
-				</p>
-			</v-col>
-
-			<v-col class="mb-5" cols="12">
-				<h2 class="headline font-weight-bold mb-5">What's next?</h2>
-
-				<v-row justify="center">
-					<a
-						v-for="(next, i) in whatsNext"
-						:key="i"
-						:href="next.href"
-						class="subheading mx-3"
-						target="_blank">
-						{{ next.text }}
-					</a>
-				</v-row>
-			</v-col>
-
-			<v-col class="mb-5" cols="12">
-				<h2 class="headline font-weight-bold mb-5">Important Links</h2>
-
-				<v-row justify="center">
-					<a
-						v-for="(link, i) in importantLinks"
-						:key="i"
-						:href="link.href"
-						class="subheading mx-3"
-						target="_blank">
-						{{ link.text }}
-					</a>
-				</v-row>
-			</v-col>
-
-			<v-col class="mb-5" cols="12">
-				<h2 class="headline font-weight-bold mb-5">Ecosystem</h2>
-
-				<v-row justify="center">
-					<a
-						v-for="(eco, i) in ecosystem"
-						:key="i"
-						:href="eco.href"
-						class="subheading mx-3"
-						target="_blank">
-						{{ eco.text }}
-					</a>
-				</v-row>
-				<v-row justify="center">
-					<a
-						v-for="(eco, i) in nombres"
-						:key="i"
-						:href="eco.href"
-						class="subheading mx-3"
-						target="_blank">
-						{{ eco.text }}
-						{{ eco.apellido }}
-					</a>
-				</v-row>
-				<v-row>
-					<v-col>
-						<v-btn color="primary" @click="enviarInformacion">
-							Enviar Información
-						</v-btn>
-					</v-col>
-				</v-row>
-			</v-col>
-		</v-row>
-	</v-container>
+				</v-card>
+			</v-form>
+		</v-sheet>
+	</div>
 </template>
-<script>
-	import axios from "axios";
+<style>
+	body,
+	html {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+	}
 
-	export default {
-		name: "HelloWorld",
+	.fondo_login {
+		background-image: url("../assets/img/fondo_login.jpg");
+		background-size: cover;
+		background-position: center;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
 
-		data: () => ({
-			nombres: [
-				{ text: "Miguel", apellido: "Arone" },
-				{ text: "Freddy", apellido: "Pachas" },
-				{ text: "Carlos", apellido: "Alcedo" },
-			],
-		}),
-
-		methods: {
-			enviarInformacion() {
-				if (!this.nombres || this.nombres.length === 0) {
-					alert("No hay datos para enviar.");
-					return;
-				}
-
-				const url = "http://localhost:8000/ia/";
-				const data = {
-					nombres: this.nombres.map((persona) => ({
-						nombre: persona.text,
-						apellido: persona.apellido,
-					})),
-				};
-				axios
-					.post(url, data)
-					.then((response) => {
-						alert(
-							"Información enviada correctamente: " +
-								JSON.stringify(response.data)
-						);
-					})
-					.catch((error) => {
-						alert("Error al enviar la información: " + error.message);
-					});
-			},
-		},
-	};
-</script>
+	.form-login {
+		margin-top: 4%;
+		background: none;
+	}
+</style>
+<script src="./Scripts/login.js"></script>
