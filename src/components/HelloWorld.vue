@@ -55,7 +55,7 @@
 		display: flex;
 		align-items: flex-start;
 		position: absolute;
-		left: 58%;
+		left: 56%;
 		top: 25%;
 		color: white;
 	}
@@ -103,13 +103,13 @@
 
 	.my-custom-form {
 		width: 350px;
-		margin-top: 90px;
+		margin-top: 35px;
 	}
 
 	.login-card {
 		width: 100%;
-		border-radius: 10px; /* Rounded corners */
-		padding: 24px; /* Padding inside the card */
+		border-radius: 30px; /* Rounded corners */
+		padding: 30px; /* Padding inside the card */
 	}
 
 	.v-img {
