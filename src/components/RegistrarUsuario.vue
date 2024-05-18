@@ -76,12 +76,13 @@
       elevation="20"
       type="submit"
       color="#8a8a8af3"
-	  > <v-img  class="home-icon" src="../assets/home.png" > </v-img>
-    Inicio
+    >
+      <v-img class="home-icon" src="../assets/home.png"> </v-img>
+      Inicio
     </v-btn>
 
-	<v-btn
-      class="btn_registrar centered-content2" 
+    <v-btn
+      class="btn_registrar centered-content2"
       density="compact"
       size="large"
       rounded="ini"
@@ -89,19 +90,18 @@
       type="submit"
       color="#8a8a8af3"
       depressed
-	  > <v-img  class="registrar-icon" src="../assets/registrar.png" > </v-img>
-    Registrar
+    >
+      <v-img class="registrar-icon" src="../assets/registrar.png"> </v-img>
+      Registrar
     </v-btn>
-
   </div>
 </template>
 
 
 <style scoped>
-
 .contenido {
   /* Puedes ajustar las propiedades según tus necesidades */
-  background-image: url("../assets/fondito.jpg");
+  background-image: url("../assets/fondofinal.jpg");
   background-size: cover;
   background-position: center;
   position: fixed;
@@ -124,21 +124,21 @@
 .user_data {
   background: none;
   margin-left: 80px;
-  font-family: Tahoma!important;
+  font-family: Tahoma !important;
   font-weight: bold;
 }
 
 .university_data {
   margin-left: 540px;
   background: none;
-  font-family: Tahoma!important;
+  font-family: Tahoma !important;
   font-weight: bold;
 }
 
 .intereses_data {
   margin-left: 1000px;
   background: none;
-  font-family: Tahoma!important;
+  font-family: Tahoma !important;
   font-weight: bold;
 }
 
@@ -212,12 +212,6 @@
   display: flex;
   justify-content: center; /* Centra el contenido horizontalmente */
 }
-
-
-
-
-
-
 </style>
 
 <script>
