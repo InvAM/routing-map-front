@@ -1,62 +1,120 @@
 <template>
   <div class="contenido">
-    <v-sheet class="user_data" width="420" height="70">
+
+    <v-sheet class="user_data" width="840" height="100">
       <v-form class="cuadro1" fast-fail @submit.prevent>
         <v-card
           class="pa-10 pb-10"
           margin-right="10"
           elevation="8"
           rounded="cajas"
-          style="margin-top: 130px"
+          style="margin-top: 40px"
           color="#8a8a8af3"
         >
           <v-img class="user_icon" src="../assets/usuario.png"></v-img>
-          <v-text class="text-center">Nombres y Apellidos</v-text>
-          <v-text-field label=""></v-text-field>
+ 
+  <v-container class="cuadro-name">  
+    <v-row class="text-names" align="center">
+      <v-col cols="auto">
+        <v-text>Nombres y Apellidos</v-text>
+      </v-col>
+      <v-col cols="auto" >
+        <v-text-field class="nombres" label=""></v-text-field>
+      </v-col>
+    </v-row>
+  </v-container>
 
-          <v-text class="text-center">Género</v-text>
-          <v-text-field label=""></v-text-field>
+  <v-container>
+    <v-row class="text-genyeadad" align="center">
+      <v-col cols="auto">
+        <v-text>Género</v-text>
+      </v-col>
+      <v-col cols="auto" >
+        <v-text-field class="generos" label=""></v-text-field>
+      </v-col>
+      <v-col cols="auto">
+        <v-text>Edad</v-text>
+      </v-col>
+      <v-col cols="auto" >
+        <v-text-field class="edad" label=""></v-text-field>
+      </v-col>
+    </v-row>
+  </v-container>
+ 
 
-          <v-text class="text-center">Edad</v-text>
-          <v-text-field label=""></v-text-field>
         </v-card>
       </v-form>
     </v-sheet>
 
-    <v-sheet class="university_data" width="420" height="50">
+    <v-sheet class="university_data" width="840" height="50">
       <v-form class="cuadro2" fast-fail @submit.prevent>
         <v-card
           class="pa-10 pb-10"
-          margin-right="10"
+          margin-right="50"
           elevation="8"
           rounded="cajas"
-          style="margin-top: -70px"
+          style="margin-top: 260px"
           color="#8a8a8af3"
         >
           <v-img class="sombrero_icon" src="../assets/sombrero.png"></v-img>
-          <v-text class="text-center">Universidad</v-text>
-          <v-text-field label=""></v-text-field>
+  
+  <v-container>
+    <v-row class="text-uni-carrera" align="center">
+      <v-col cols="auto">
+        <v-text>Universidad</v-text>
+      </v-col>
+      <v-col cols="auto" >
+        <v-text-field class="universidad" label=""></v-text-field>
+      </v-col>
+      <v-col cols="auto">
+        <v-text>Carrera</v-text>
+      </v-col>
+      <v-col cols="auto" >
+        <v-text-field class="carrera" label=""></v-text-field>
+      </v-col>
+    </v-row>
+  </v-container>
 
-          <v-text class="text-center">Carrera</v-text>
-          <v-text-field label=""></v-text-field>
-
-          <v-text class="text-center">Año de Graduación</v-text>
-          <v-text-field label=""></v-text-field>
+  <v-container>
+    <v-row class="text-nivel" align="center">
+      <v-col cols="auto">
+        <v-text>Año de Graduación</v-text>
+      </v-col>
+      <v-col cols="auto" >
+        <v-text-field class="año" label=""></v-text-field>
+      </v-col>
+      <v-col cols="auto">
+        <v-text>Nivel Académico</v-text>
+      </v-col>
+      <v-col cols="auto" >
+        <v-text-field class="nivel" label=""></v-text-field>
+      </v-col>
+      <v-col cols="auto">
+        <v-text>Condición de Estudiante</v-text>
+      </v-col>
+      <v-col cols="auto" >
+        <v-text-field class="condi" label=""></v-text-field>
+      </v-col>
+    </v-row>
+  </v-container>
+          
         </v-card>
       </v-form>
     </v-sheet>
 
-    <v-sheet class="intereses_data" width="420" height="50">
+    <v-sheet class="intereses_data" width="490" height="20">
       <v-form class="cuadro3" fast-fail @submit.prevent>
         <v-card
           class="pa-10 pb-10"
           margin-right="10"
           elevation="8"
           rounded="cajas"
-          style="margin-top: -50px"
+          style="margin-top: -410px"
           color="#8a8a8af3"
         >
           <v-img class="habi_icon" src="../assets/habilidades.png"></v-img>
+
+          
           <v-text class="text-center">Habilidades</v-text>
           <v-text-field label=""></v-text-field>
 
@@ -64,6 +122,18 @@
           <v-text-field label=""></v-text-field>
 
           <v-text class="text-center">Áreas de Estudio</v-text>
+          <v-text-field label=""></v-text-field>
+
+          <v-text class="text-center">Nota Promedio</v-text>
+          <v-text-field label=""></v-text-field>
+
+          <v-text class="text-center">Habilidades Blandas</v-text>
+          <v-text-field label=""></v-text-field>
+
+          <v-text class="text-center">Habilidad en Programación</v-text>
+          <v-text-field label=""></v-text-field>
+
+          <v-text class="text-center">Habilidad en Matemáticas</v-text>
           <v-text-field label=""></v-text-field>
         </v-card>
       </v-form>
@@ -123,39 +193,40 @@
 /* CUADROS DE INFORMACION*/
 .user_data {
   background: none;
-  margin-left: 80px;
-  font-family: Tahoma !important;
+  margin-left: 260px;
+  font-family: 'Poppins', sans-serif; /* Aplicar la fuente */
   font-weight: bold;
 }
 
 .university_data {
-  margin-left: 540px;
+  margin-left: 260px;
   background: none;
-  font-family: Tahoma !important;
+  font-family: 'Poppins', sans-serif; /* Aplicar la fuente */
   font-weight: bold;
 }
 
 .intereses_data {
-  margin-left: 1000px;
+  margin-left: 1130px;
   background: none;
-  font-family: Tahoma !important;
+  font-family: 'Poppins', sans-serif; /* Aplicar la fuente */
   font-weight: bold;
 }
 
 /* BOTONES*/
 .btn_inicio {
-  min-width: 15%;
-  height: 45px;
-  margin-top: 440px;
-  margin-left: 480px;
+  min-width: 12%;
+  height: 65px;
+  margin-top: 280px;
+  margin-left: 1645px;
   font-weight: bold;
+  font-family: 'Poppins', sans-serif; /* Aplicar la fuente */
 }
 
 .btn_registrar {
-  min-width: 15%;
-  height: 45px;
-  margin-top: 440px;
-  margin-left: 60px;
+  min-width: 12%;
+  height: 65px;
+  margin-top: 20px;
+  margin-left: 1645px;
   font-weight: bold;
 }
 
@@ -180,19 +251,19 @@
 /* ICONOS*/
 .user_icon {
   margin: auto;
-  width: 40px;
+  width: 50px;
   padding-bottom: 23px;
 }
 
 .sombrero_icon {
   margin: auto;
-  width: 55px;
+  width: 60px;
   padding-bottom: 10px;
 }
 
 .habi_icon {
   margin: auto;
-  width: 40px;
+  width: 60px;
   padding-bottom: 23px;
 }
 
@@ -208,10 +279,50 @@
   margin-right: 50px; /* ajusta el margen según tu necesidad */
 }
 
-.text-center {
+/* LABELS DEL CUADRO DE USER */
+.nombres{
+  width: 530px;
+
+}
+.generos{
+  width: 250px;
+
+}
+.edad{
+  width: 140px;
+}
+
+.universidad{
+  width: 250px;
+}
+.carrera{
+  width: 250px;
+}
+
+.año{
+  width: 100px;
+}
+.nivel{
+  width: 150px;
+}
+.condi{
+  width: 250px;
+}
+
+
+.cuadro-name{
+  padding: 0%;
+}
+
+.text-genyeadad{
+  margin-left: 60px;
+}
+
+.text-center{
   display: flex;
   justify-content: center; /* Centra el contenido horizontalmente */
 }
+
 </style>
 
 <script>
