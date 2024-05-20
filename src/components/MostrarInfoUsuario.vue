@@ -1,6 +1,6 @@
 <template>
 	<div class="contenido">
-		<v-container style="margin-left: 545px">
+		<v-container  style="margin-left: 545px">
 			<v-card class="user-info-card">
 				<v-card-subtitle>
 					<v-row>
@@ -111,28 +111,33 @@
 		height: 100%;
 		top: 0;
 		left: 0;
+
 	}
 	.user-info-card {
 		max-width: 740px;
-		padding: 25px;
+		padding: 10px;
 		background-color: #fff;
-		border-radius: 50px;
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		border-radius: 90px;
+		box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+		margin: 1px;
 		
 	}
+		
 	.headline {
 		text-align: center;
 		font-size: 24px;
 		font-weight: bold;
 		margin-bottom: 5px;
+		margin: -7px;
 	}
 	.avatar-col {
 		display: flex;
 		justify-content: center;
-		margin-top: 5px;
+		margin-top: 1px;
 	}
 	.info-row {
 		margin-bottom: 4px;
+		margin: -7px;
 	}
 	.info-label {
 		font-weight: bold;
@@ -143,8 +148,9 @@
 	}
 	.v-boton {
 		font-weight: bold;
-		margin-left: 100px;
-    margin-bottom: 5px;
+		margin-left: 150px;
+        margin-bottom: 5px;
+		
 	}
 </style>
 
