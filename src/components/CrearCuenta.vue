@@ -127,4 +127,4 @@
 		padding-bottom: 0px;
 	}
 </style>
-<script src="./Scripts/login.js"></script>
+<script src="./Scripts/crearcuenta.js"></script>

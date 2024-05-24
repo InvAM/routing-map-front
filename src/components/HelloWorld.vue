@@ -35,7 +35,7 @@
 							type="submit"
 							color="#821902"
 							block
-							@click="CrearCuenta"
+							@click="crear_cuenta"
 							>Crear Cuenta Nueva</v-btn
 						>
 					</v-card>
@@ -117,23 +117,5 @@
 		max-width: 100%;
 	}
 </style>
-<script src="./Scripts/login.js">
-
-export default{
-
-name:'HelloWorld',
-methods: {
-	goCrearCuenta() {
-		this.$router.push({ name: '/crearcuenta'});
-
-	}
-	
-
-
-}
-}
-
-
-
-</script>
+<script src="./Scripts/login.js"></script>
 

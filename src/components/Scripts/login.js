@@ -20,6 +20,9 @@ export default {
 	}),
 
 	methods: {
+		crear_cuenta(){
+			this.$router.push("/crearcuenta");
+		},
 		enviarInformacion() {
 			if (!this.nombres || this.nombres.length === 0) {
 				alert("No hay datos para enviar.");
