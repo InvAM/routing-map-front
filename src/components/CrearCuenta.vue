@@ -39,6 +39,7 @@
 							type="submit"
 							color="#821902"
 							block
+							
 							>Crear Cuenta</v-btn
 						>
 					</v-card>
