@@ -3,18 +3,33 @@
 		<div class="login-content">
 			<div class="login-form">
 				<v-form class="my-custom-form form-login" fast-fail @submit.prevent>
-					<v-card class="login-card" elevation="8" color="#262626">
+					<v-card class="login-card" 
+          margin-right="60"
+          elevation="8"
+          rounded="cajas"
+          style="margin-top: 10px"  color="#262626">
+						
+				<v-img  class="logo-icon" src="../assets/img/logoSI.png"></v-img>
+			
+						
 						<v-text-field label="Usuario" color="white"></v-text-field>
-						<v-text-field
-							v-model="password"
+                        <v-text-field v-model="password"
 							:append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
 							:rules="[rules.required]"
 							:type="show1 ? 'text' : 'password'"
-							hint="At least 8 characters"
-							label="Código Estudiante"
-							name="input-10-1"
-							counter
-							@click:append="show1 = !show1"></v-text-field>
+							hint="At least 8 characters" 
+                            label="Contraseña" color="white"
+                            @click:append="show1 = !show1"></v-text-field>
+
+                            <v-text-field v-model="password"
+							:append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+							:rules="[rules.required]"
+							:type="show1 ? 'text' : 'password'"
+							hint="At least 8 characters" 
+                            label="Confirmar Contraseña" color="white"
+                            ></v-text-field>
+						
+					
 						<v-btn
 							density="compact"
 							size="large"
@@ -24,39 +39,23 @@
 							type="submit"
 							color="#821902"
 							block
-							>Ingresar</v-btn
-						>
-						<v-btn
-							density="compact"
-							size="large"
-							rounded="xl"
-							elevation="20"
-							class="mt-2"
-							type="submit"
-							color="#821902"
-							block
-							@click="crear_cuenta"
-							>Crear Cuenta Nueva</v-btn
+							
+							>Crear Cuenta</v-btn
 						>
 					</v-card>
 				</v-form>
 			</div>
-			<div class="titulo">
-				<h1>BIENVENIDO(A) A</h1>
-			</div>
-			<div class="login-image">
-				<v-img src="../assets/img/logoSI.png"></v-img>
-			</div>
+			
+			
 		</div>
 	</div>
 </template>
-
-<style>
-	.titulo {
+<style> 
+.titulo {
 		display: flex;
 		align-items: flex-start;
 		position: absolute;
-		left: 56%;
+		left:40%;
 		top: 25%;
 		color: white;
 	}
@@ -87,19 +86,22 @@
 	.login-content {
 		display: flex;
 		width: 100%;
-		max-width: 960px; /* You can adjust this value */
+		max-width: 660px; /* You can adjust this value */
 	}
 
 	.login-form {
 		flex: 1;
-		padding-right: 20px; /* Space between the form and the image */
+		padding-right: 60px; /* Space between the form and the image */
+		margin-left: 60px;
 	}
 
 	.login-image {
-		flex: 1;
-		display: flex;
-		justify-content: center;
 		align-items: center;
+		margin-left: -65px;
+		left: 40%;
+		margin-top: -80px;
+
+
 	}
 
 	.my-custom-form {
@@ -108,14 +110,21 @@
 	}
 
 	.login-card {
+		margin-left: 75px;
 		width: 100%;
 		border-radius: 30px; /* Rounded corners */
 		padding: 30px; /* Padding inside the card */
 	}
 
 	.v-img {
-		max-width: 100%;
+		max-width: 70%;
+		left: 70px;
+
+	}
+	.logo-icon{
+		margin:-30px;
+		width: 260px;
+		padding-bottom: 0px;
 	}
 </style>
-<script src="./Scripts/login.js"></script>
-
+<script src="./Scripts/crearcuenta.js"></script>
