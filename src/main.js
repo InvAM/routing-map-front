@@ -12,3 +12,6 @@ createApp(App)
   .use(store)
   .use(vuetify)
   .mount('#app')
+
+
+Vue.config.productionTip = false;

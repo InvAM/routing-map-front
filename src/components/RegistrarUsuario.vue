@@ -146,6 +146,7 @@
       elevation="20"
       type="submit"
       color="#8a8a8af3"
+      @click="goToHome"
     >
       <v-img class="home-icon" src="../assets/home.png"> </v-img>
       Inicio
@@ -160,6 +161,8 @@
       type="submit"
       color="#8a8a8af3"
       depressed
+      @click="goToMostrarInfo"
+
     >
       <v-img class="registrar-icon" src="../assets/registrar.png"> </v-img>
       Registrar
@@ -326,7 +329,18 @@
 </style>
 
 <script>
+
 export default {
-  name: "RegistrarUsuario",
+  name: 'RegistrarUsuario',
+  methods: {
+    goToHome() {
+      this.$router.push({ name: 'home' });
+    },
+    goToMostrarInfo() {
+      this.$router.push({ name: 'MostrarInfoUsuario' });
+    }
+
+  }
 };
+
 </script>

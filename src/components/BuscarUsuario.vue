@@ -1,23 +1,34 @@
-<!-- src/components/UserInterface.vue -->
 <template>
+  
   <div class="container">
-    <v-sheet>
-      <v-form class="cuadro1" fast-fail @submit.prevent>
-        <div class="search-bar">
+    <v-sheet class="buscar_user" width="1000" height="400">
+      <v-form  fast-fail @submit.prevent>
+        <v-card
+          class="pa-12 pb-10"
+          margin-right="10"
+          elevation="10"
+          rounded="cajas"
+          style="margin-top: 0px"
+          color="#8a8a8af3">
+          <div class="search-bar">
           <input type="text" placeholder="Buscar..." />
-          <v-btn>
-            <v-img class="registrar-icon" src="../assets/registrar.png"> </v-img>
-            Buscar </v-btn>
-        </div>
+          <v-btn class="buscar-btn">
+            <v-img class="buscar-icon" src="../assets/buscar.png"> </v-img> 
+          </v-btn>
+          </div>
+      
         <div class="content"></div>
+
+        </v-card>
       </v-form>
     </v-sheet>
-    <v-btn class="btn_registrar centered-content2" density="compact" size="large" rounded="ini" elevation="20"
+    <v-btn class="btn_editarinfo centered-content2" density="compact" size="large" rounded="ini" elevation="20"
       type="submit" color="#8a8a8af3" depressed>
-      <v-img class="registrar-icon" src="../assets/registrar.png"> </v-img>
-      Editar Usuario
+      <v-img class="editar-icon" src="../assets/editar.png"> </v-img>
+      Editar Información
     </v-btn>
   </div>
+
 </template>
 
 
@@ -38,18 +49,27 @@
   justify-content: center;
   height: 100vh;
   background-color: #0f0f1f;
+}
 
+.buscar_user {
+  background: none;
+  margin-left:-50px;
+  font-family: 'Poppins', sans-serif; /* Aplicar la fuente */
+  font-weight: bold;
+  width: 150%;
+  margin-top: -450px;
 
 }
 
-
+/* BARRA DE BUSQUEDA */
 .search-bar {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
   background-color: #ccc;
-  border-radius: 10px;
   padding: 10px;
+  border-radius: 25px;
+
 }
 
 .search-bar input {
@@ -57,7 +77,7 @@
   outline: none;
   flex-grow: 1;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 50px;
 }
 
 .search-button {
@@ -67,10 +87,10 @@
 }
 
 .content {
-  width: 70%;
-  height: 300px;
+  width: 100%;
+  height: 450px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 40px;
   margin-bottom: 20px;
 }
 
@@ -84,11 +104,39 @@
   background-color: #fff;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
 }
+div.v-card{
+  border-radius: 50px;
+}
 
+.buscar-icon {
+  width: 30px; /* ajusta el tamaño según tu necesidad */
+  height: 35px;
+}
+
+.editar-icon{
+  width: 30px; /* ajusta el tamaño según tu necesidad */
+  height: 35px;
+  margin-right: 10px;
+}
+.buscar.btn{
+  margin-left: -30px; /* ajusta el margen según tu necesidad */
+  border-radius: 80px;
+
+}
+
+.btn_editarinfo {
+  min-width: 10%;
+  height: 65px;
+  margin-top: -300px;
+  margin-left: 1430px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif; /* Aplicar la fuente */
+  border-radius: 50px;
+
+}
 </style>
 
 <script>
