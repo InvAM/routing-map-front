@@ -11,7 +11,7 @@
           style="margin-top: 40px"
           color="#8a8a8af3"
         >
-          <v-img class="user_icon" src="../assets/usuario.png"></v-img>
+          <v-img class="user_icon" src="../assets/Usuario.png"></v-img>
  
   <v-container class="cuadro-name">  
     <v-row class="text-names" align="center">
