@@ -38,9 +38,7 @@ const routes = [
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () =>
-			import(
-				/* webpackChunkName: "about" */ "../components/BuscarUsuario.vue"
-			),
+			import(/* webpackChunkName: "about" */ "../components/BuscarUsuario.vue"),
 	},
 	{
 		path: "/crearcuenta",
@@ -49,12 +47,14 @@ const routes = [
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () =>
-			import(
-				/* webpackChunkName: "about" */ "../components/CrearCuenta.vue"
-			),
+			import(/* webpackChunkName: "about" */ "../components/CrearCuenta.vue"),
 	},
-	
-
+	{
+		path: "/menu",
+		name: "Menu",
+		component: () =>
+			import(/* webpackChunkName: "about" */ "../components/Menu.vue"),
+	},
 ];
 
 const router = createRouter({

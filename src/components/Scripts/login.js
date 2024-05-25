@@ -4,14 +4,13 @@ export default {
 	name: "HelloWorld",
 
 	data: () => ({
-		nombres: [
-			{ text: "Miguel", apellido: "Arone" },
-			{ text: "Freddy", apellido: "Pachas" },
-			{ text: "Carlos", apellido: "Alcedo" },
-		],
-		show1: false,
-		show2: true,
-		password: "ExamplePassword",
+		username: "",
+		password: "",
+		mensajeError: "",
+		mensaje: "",
+		dialogError: false,
+		typemsg: "",
+		credenciales: [],
 		rules: {
 			required: (value) => !!value || "Ingresar Contraseña.",
 			min: (v) => v.length >= 8 || "Min 8 characters",
@@ -19,34 +18,68 @@ export default {
 		},
 	}),
 
+	mounted() {
+		this.obtenerCredenciales();
+	},
 	methods: {
-		crear_cuenta(){
+		cerrar() {
+			this.dialogError = false;
+		},
+		crear_cuenta() {
 			this.$router.push("/crearcuenta");
 		},
-		enviarInformacion() {
-			if (!this.nombres || this.nombres.length === 0) {
-				alert("No hay datos para enviar.");
-				return;
-			}
-
-			const url = "http://localhost:8000/ia/";
-			const data = {
-				nombres: this.nombres.map((persona) => ({
-					nombre: persona.text,
-					apellido: persona.apellido,
-				})),
-			};
+		obtenerCredenciales() {
 			axios
-				.post(url, data)
-				.then((response) => {
-					alert(
-						"Información enviada correctamente: " +
-							JSON.stringify(response.data)
-					);
+				.get("http://localhost:3000/users")
+				.then((res) => {
+					this.credenciales = res.data;
 				})
-				.catch((error) => {
-					alert("Error al enviar la información: " + error.message);
-				});
+				.catch((error) => e);
+		},
+		verificar() {
+			if (this.username !== "" && this.password !== "") {
+				const credencial = this.credenciales.some(
+					(credencial) =>
+						credencial.username !== this.username ||
+						credencial.password !== this.password
+				);
+				if (credencial) {
+					(this.mensaje = "Verifique su usuario y contraseña"),
+						(this.dialogError = true);
+					this.typemsg = "error";
+				}
+			}
+		},
+
+		async iniciarSesion() {
+			this.verificar();
+			var data = {
+				username: this.username,
+				password: this.password,
+			};
+			if (this.username === "" || this.password === "") {
+				console.log(data.username);
+				console.log(data.password);
+				this.mensaje = "Faltan completar datos";
+				this.typemsg = "error";
+				this.dialogError = true;
+			} else {
+				try {
+					await axios.post("http://localhost:3000/users/validate", data);
+					this.$router.push("/menu");
+				} catch (error) {
+					if (error.response.data.errors) {
+						const errors = error.response.data.errors;
+						if (errors.username) {
+							this.mensajeError =
+								"El nombre de usuario ingresado es incorrecto";
+						}
+						if (errors.password) {
+							this.mensajeError = "La contraseña ingresada es incorrecta";
+						}
+					}
+				}
+			}
 		},
 	},
 };

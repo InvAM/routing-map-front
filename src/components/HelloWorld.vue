@@ -4,41 +4,23 @@
 			<div class="login-form">
 				<v-form class="my-custom-form form-login" fast-fail @submit.prevent>
 					<v-card class="login-card" elevation="8" color="#262626">
-						<v-text-field label="Usuario" color="white"></v-text-field>
-						<v-text-field
-							v-model="password"
-							:append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-							:rules="[rules.required]"
-							:type="show1 ? 'text' : 'password'"
-							hint="At least 8 characters"
-							label="Código Estudiante"
-							name="input-10-1"
-							counter
+						<v-text-field v-model="username" label="Usuario" color="white"></v-text-field>
+						<v-text-field v-model="password" :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+							:rules="[rules.required]" :type="show1 ? 'text' : 'password'" hint="At least 8 characters"
+							label="Código Estudiante" name="input-10-1" counter
 							@click:append="show1 = !show1"></v-text-field>
-						<v-btn
-							density="compact"
-							size="large"
-							rounded="xl"
-							elevation="20"
-							class="mt-2"
-							type="submit"
-							color="#821902"
-							block
-							>Ingresar</v-btn
-						>
-						<v-btn
-							density="compact"
-							size="large"
-							rounded="xl"
-							elevation="20"
-							class="mt-2"
-							type="submit"
-							color="#821902"
-							block
-							@click="crear_cuenta"
-							>Crear Cuenta Nueva</v-btn
-						>
+						<v-btn density="compact" size="large" rounded="xl" elevation="20" class="mt-2" type="submit"
+							color="#821902" @click="iniciarSesion" block>Ingresar</v-btn>
+						<v-btn density="compact" size="large" rounded="xl" elevation="20" class="mt-2" type="submit"
+							color="#821902" block @click="crear_cuenta">Crear Cuenta Nueva</v-btn>
 					</v-card>
+					<v-row v-if="mensajeError" align="center">
+						<v-col cols="12">
+							<v-alert type="error" class="mt-4">
+								{{ mensajeError }}
+							</v-alert>
+						</v-col>
+					</v-row>
 				</v-form>
 			</div>
 			<div class="titulo">
@@ -48,74 +30,93 @@
 				<v-img src="../assets/img/logoSI.png"></v-img>
 			</div>
 		</div>
+		<v-dialog v-model="dialogError" :width="500">
+			<v-card color="#ec4a4a">
+				<v-card-title>
+					<span class="mx-auto" style="color: white"> ¡Verifique! </span>
+				</v-card-title>
+				<v-card-text>
+					<v-alert v-if="mensaje !== ''" color="white" :type="typemsg" outlined>{{ mensaje }}</v-alert>
+				</v-card-text>
+				<v-card-actions style="display: flex; justify-content: center">
+					<v-btn style="background-color: #033076; color: #ffffff" @click="cerrar">
+						Cerrar
+					</v-btn>
+				</v-card-actions>
+			</v-card>
+		</v-dialog>
 	</div>
 </template>
 
 <style>
-	.titulo {
-		display: flex;
-		align-items: flex-start;
-		position: absolute;
-		left: 56%;
-		top: 25%;
-		color: white;
-	}
-	body,
-	html {
-		margin: 0;
-		padding: 0;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+.titulo {
+	display: flex;
+	align-items: flex-start;
+	position: absolute;
+	left: 56%;
+	top: 25%;
+	color: white;
+}
 
-	.fondo_login {
-		background-image: url("../assets/img/Fondo_2.jpg");
-		background-size: cover;
-		background-position: center;
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-	.login-content {
-		display: flex;
-		width: 100%;
-		max-width: 960px; /* You can adjust this value */
-	}
+.fondo_login {
+	background-image: url("../assets/img/Fondo_2.jpg");
+	background-size: cover;
+	background-position: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-	.login-form {
-		flex: 1;
-		padding-right: 20px; /* Space between the form and the image */
-	}
+.login-content {
+	display: flex;
+	width: 100%;
+	max-width: 960px;
+	/* You can adjust this value */
+}
 
-	.login-image {
-		flex: 1;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+.login-form {
+	flex: 1;
+	padding-right: 20px;
+	/* Space between the form and the image */
+}
 
-	.my-custom-form {
-		width: 350px;
-		margin-top: 35px;
-	}
+.login-image {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-	.login-card {
-		width: 100%;
-		border-radius: 30px; /* Rounded corners */
-		padding: 30px; /* Padding inside the card */
-	}
+.my-custom-form {
+	width: 350px;
+	margin-top: 35px;
+}
 
-	.v-img {
-		max-width: 100%;
-	}
+.login-card {
+	width: 100%;
+	border-radius: 30px;
+	/* Rounded corners */
+	padding: 30px;
+	/* Padding inside the card */
+}
+
+.v-img {
+	max-width: 100%;
+}
 </style>
 <script src="./Scripts/login.js"></script>
-
