@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="contenido">
 
     <v-sheet class="user_data" width="840" height="100">
@@ -343,4 +343,4 @@ export default {
   }
 };
 
-</script>
+</script> -->
