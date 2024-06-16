@@ -1,5 +1,5 @@
 <template>
-    <div class="fondo_login">
+    <div class="fondo_menu">
         <v-form class="cuadro1" fast-fail @submit.prevent>
 			<v-card 
                 class="login-card" 
@@ -16,6 +16,7 @@
                 width="350" 
                 height="150"
                 color="rgba(217, 217, 217, 1)"
+                @click="login"
                 >
                 <v-img class="home-icon" src="../assets/img/home.png"></v-img>
                 <span class="btn-text">LOGIN</span>
@@ -49,6 +50,7 @@
                 width="350" 
                 height="150"
                 color="rgba(217, 217, 217, 1)"
+                @click="recuperarContraseña"
                 >
                 <v-img class="home-icon" src="../assets/img/recucontra.png"></v-img>
                 <span class="btn-text">RECUPERAR CONTRASEÑA</span>
@@ -71,7 +73,7 @@
 </template>
 
 <style>
-.fondo_login {
+.fondo_menu {
 		background-image: url("../assets/img/fondofinal.jpg");
 		background-size: cover;
 		background-position: center;
@@ -140,9 +142,4 @@
 }
 
 </style>
-<script >
-	export default {
-		name: "MenuUser",
-	};
-
-</script>
+<script src="./Scripts/MenuUser.js"></script>

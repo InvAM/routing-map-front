@@ -14,31 +14,7 @@ const routes = [
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () =>
-			import(
-				/* webpackChunkName: "about" */ "../components/MenuUser.vue"
-			),
-	},
-	{
-		path: "/menuadmin",
-		name: "MenuAdmin",
-		// route level code-splitting
-		// this generates a separate chunk (about.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
-		component: () =>
-			import(
-				/* webpackChunkName: "about" */ "../components/MenuAdmin.vue"
-			),
-	},
-	{
-		path: "/loginadmin",
-		name: "LoginAdmin",
-		// route level code-splitting
-		// this generates a separate chunk (about.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
-		component: () =>
-			import(
-				/* webpackChunkName: "about" */ "../components/LoginAdmin.vue"
-			),
+			import(/* webpackChunkName: "about" */ "../components/MenuUser.vue"),
 	},
 	{
 		path: "/repoentrenamiento",
@@ -69,9 +45,7 @@ const routes = [
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () =>
-			import(
-				/* webpackChunkName: "about" */ "../components/Reportes.vue"
-			),
+			import(/* webpackChunkName: "about" */ "../components/Reportes.vue"),
 	},
 	{
 		path: "/nuevorecu",
@@ -80,32 +54,7 @@ const routes = [
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () =>
-			import(
-				/* webpackChunkName: "about" */ "../components/NuevoRecu.vue"
-			),
-	},
-
-	{
-		path: "/prediction",
-		name: "prediction",
-		// route level code-splitting
-		// this generates a separate chunk (about.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
-		component: () =>
-			import(
-				/* webpackChunkName: "about" */ "../components/prediction.vue"
-			),
-	},
-	{
-		path: "/administraria",
-		name: "AdministrarIA",
-		path: "/buscarusuario",
-		name: "BuscarUsuario",
-		// route level code-splitting
-		// this generates a separate chunk (about.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
-		component: () =>
-			import(/* webpackChunkName: "about" */ "../components/BuscarUsuario.vue"),
+			import(/* webpackChunkName: "about" */ "../components/NuevoRecu.vue"),
 	},
 	{
 		path: "/crearcuenta",
@@ -129,17 +78,6 @@ const routes = [
 			),
 	},
 	{
-		path: "/recucontraadmin",
-		name: "RecuperarContraAdmin",
-		// route level code-splitting
-		// this generates a separate chunk (about.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
-		component: () =>
-			import(
-				/* webpackChunkName: "about" */ "../components/RecuperarContraAdmin.vue"
-			),
-	},
-	{
 		path: "/prediccion",
 		name: "Prediccion",
 		// route level code-splitting
@@ -158,18 +96,6 @@ const routes = [
 			import(
 				/* webpackChunkName: "about" */ "../components/Actualizarinfo.vue"
 			),
-	},
-	{
-		path: "/menu",
-		name: "Menu",
-		component: () =>
-			import(/* webpackChunkName: "about" */ "../components/Menu.vue"),
-	},
-	{
-		path: "/menu",
-		name: "Menu",
-		component: () =>
-			import(/* webpackChunkName: "about" */ "../components/Menu.vue"),
 	},
 ];
 

@@ -1,13 +1,9 @@
+import axios from "axios";
 
 export default {
-  data() {
-    return {
-      user: {
-        name: ''
-      },
-      rules: {
-        required: value => !!value || 'Este campo es requerido',
-      },
-    };
-  },
+	name: "HelloWorld",
+	data: () => ({
+    
+  }),
+	methods: {},
 };
