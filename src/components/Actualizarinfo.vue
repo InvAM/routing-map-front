@@ -8,7 +8,7 @@
             color="rgba(146, 139, 139, 0.85)" 
             width="1600" 
             height="850">
-
+            
             <div class="titulo">
             <h1 class="text">ACTUALIZAR INFORMACIÓN</h1>
             </div>
