@@ -21,6 +21,7 @@ export default {
 	mounted() {
 		this.obtenerCredenciales();
 	},
+	
 	methods: {
 		cerrar() {
 			this.dialogError = false;
@@ -30,7 +31,7 @@ export default {
 		},
 		obtenerCredenciales() {
 			axios
-				.get("http://localhost:3000/users")
+				.get("http://localhost:3000/credenciales")
 				.then((res) => {
 					this.credenciales = res.data;
 				})
@@ -65,8 +66,8 @@ export default {
 				this.dialogError = true;
 			} else {
 				try {
-					await axios.post("http://localhost:3000/users/validate", data);
-					this.$router.push("/menu");
+					await axios.post("http://localhost:3000/credenciales/validar", data);
+					this.$router.push("/menuuser");
 				} catch (error) {
 					if (error.response.data.errors) {
 						const errors = error.response.data.errors;
