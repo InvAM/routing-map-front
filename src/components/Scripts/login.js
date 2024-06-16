@@ -66,7 +66,7 @@ export default {
 			} else {
 				try {
 					await axios.post("http://localhost:3000/users/validate", data);
-					this.$router.push("/menu");
+					this.$router.push("/registrarusuario");
 				} catch (error) {
 					if (error.response.data.errors) {
 						const errors = error.response.data.errors;
