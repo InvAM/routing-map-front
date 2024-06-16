@@ -1,0 +1,37 @@
+{
+    "1": {
+        "name": "admin1",
+        "lastname": "admin1",
+        "dni": "1234",
+        "age": 17,
+        "participacion": true,
+        "notaPromedio": 17,
+        "idNivelAcademico": 1,
+        "idHabilidadesProgramacion": 2,
+        "idHabilidadesMatematicas": 2,
+        "idCondicionEstudiante": 2,
+        "idConocimientoLenguajes": [3,0,4],
+        "idHabilidadesBlandas": 1,
+        "idIntereses": 1,
+        "idRutaAprendizaje": 2,
+        "idUser": 1
+    },
+
+    "2": {
+        "name": "prueba1",
+        "lastname": "prueba1",
+        "dni": "12345678",
+        "age": 21,
+        "participacion": true,
+        "notaPromedio": 18,
+        "idNivelAcademico": 1,
+        "idHabilidadesProgramacion": 1,
+        "idHabilidadesMatematicas": 2,
+        "idCondicionEstudiante": 1,
+        "idConocimientoLenguajes": [0,2,1],
+        "idHabilidadesBlandas": 1,
+        "idIntereses": 1,
+        "idRutaAprendizaje": 2,
+        "idUser": 1
+    }
+}
