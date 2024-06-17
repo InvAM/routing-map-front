@@ -33,9 +33,8 @@
             </v-text>
             <v-text class="graduaciclo">
                 <span class="graduacion">Año de graduación</span>
-                <span class="ciclo">o ciclo:</span>
             </v-text>
-            <v-text class="carrera">Carrera:</v-text>
+            <v-text class="carrera">Ciclo:</v-text>
             <v-text class="nota">Nota promedio:</v-text>
             <v-text class="condicion">
                 <span class="condi">Condición de</span>
@@ -285,7 +284,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
     position: absolute;
     left:35%;
-    top: 20%;
+    top: 21%;
     color: white;
     display: block;
 }

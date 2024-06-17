@@ -48,15 +48,6 @@ const routes = [
 			import(/* webpackChunkName: "about" */ "../components/Reportes.vue"),
 	},
 	{
-		path: "/nuevorecu",
-		name: "NuevoRecu",
-		// route level code-splitting
-		// this generates a separate chunk (about.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
-		component: () =>
-			import(/* webpackChunkName: "about" */ "../components/NuevoRecu.vue"),
-	},
-	{
 		path: "/crearcuenta",
 		name: "CrearCuenta",
 		// route level code-splitting
@@ -97,6 +88,19 @@ const routes = [
 				/* webpackChunkName: "about" */ "../components/Actualizarinfo.vue"
 			),
 	},
+	{
+		path: "/administraria",
+		name: "AdministrarIA",
+		// route level code-splitting
+		// this generates a separate chunk (about.[hash].js) for this route
+		// which is lazy-loaded when the route is visited.
+		component: () =>
+			import(
+				/* webpackChunkName: "about" */ "../components/AdministrarIA.vue"
+			),
+	},
+
+
 ];
 
 const router = createRouter({

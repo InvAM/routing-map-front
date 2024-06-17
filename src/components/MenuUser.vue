@@ -28,6 +28,7 @@
                 width="350" 
                 height="150"
                 color="rgba(217, 217, 217, 1)"
+                @click="actualizarinf"
                 >
                 <v-img class="home-icon" src="../assets/img/actualizar.png"></v-img>
                 <span class="btn-text">ACTUALIZAR INFORMACIÓN</span>
@@ -39,6 +40,7 @@
                 width="350" 
                 height="150"
                 color="rgba(217, 217, 217, 1)"
+                @click="predic"
                 >
                 <v-img class="home-icon" src="../assets/img/prediccion.png"></v-img>
                 <span class="btn-text">PREDICCIÓN</span>
@@ -62,6 +64,7 @@
                 width="350" 
                 height="150"
                 color="rgba(217, 217, 217, 1)"
+                @click="repo"
                 >
                     <v-img class="home-icon" src="../assets/img/reporte.png"></v-img>
                     <span class="btn-text">REPORTES</span>
