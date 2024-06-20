@@ -18,9 +18,6 @@ export default {
             this.$router.push("/prediccion")
 
         },
-        repo(){
-            this.$router.push("/reportes")
-        }
 
     }
 };
