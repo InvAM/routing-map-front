@@ -8,7 +8,7 @@
                 width="850" 
                 height="650">
             <div class="titulo">
-                <h1 class="text">RECUPERAR CONTRASEÑA ADMIN</h1>
+                <h1 class="text">RECUPERAR CONTRASEÑA</h1>
             </div>
             <v-img class="recuadmin_icon" src="../assets/img/recuadmin.png"></v-img>
   
@@ -69,7 +69,7 @@
   
 .contenido {
     /* Puedes ajustar las propiedades según tus necesidades */
-    background-image: url("../assets/fondofinal.jpg");
+    background-image: url("../assets/img/fondofinal.jpg");
     background-size: cover;
     background-position: center;
     position: fixed;
@@ -89,7 +89,7 @@
     display: flex;
     align-items: flex-start;
     position: absolute;
-    left:30.4%;
+    left:36.4%;
     top: 14%;
     color: white;
 }
@@ -106,7 +106,6 @@
     top:-10px;
     width: 77px;
     padding-bottom: 10px;
-    left: -3%;
 }
   
 .usuario{
@@ -133,31 +132,32 @@
 }
 
 .parrafo{
-    font-style: italic;
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    text-align: center;       
-    font-size: 18px;
-    margin-top: 20px;
-    margin-left: 14%;
-    margin-right: 16.7%;
+      font-style: italic;
+      display: flex;
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center; /* Centra verticalmente */
+      text-align: center;       
+      font-size: 18px;
+      margin-top: 20px;
+      margin-left: 14%;
+      margin-right: 16.7%;
 }
 
 .btn-aceptar{
-    margin-top: -15px;
-    left: 30.7%;
-    border-radius: 17px;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+  margin-top: -15px;
+  left: 30.7%;
+  border-radius: 17px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 </style>
-
+  
 <script>
-export default {
+ export default {
     data: () => ({
     visible: false,
     }),
-}
+  }
 </script>
+  

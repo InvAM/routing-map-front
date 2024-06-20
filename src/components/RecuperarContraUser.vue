@@ -69,7 +69,7 @@
 
 .contenido {
     /* Puedes ajustar las propiedades según tus necesidades */
-    background-image: url("../assets/fondofinal.jpg");
+    background-image: url("../assets/img/fondofinal.jpg");
     background-size: cover;
     background-position: center;
     position: fixed;
