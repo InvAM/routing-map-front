@@ -13,7 +13,7 @@
             <h1 class="text">ACTUALIZAR INFORMACIÓN</h1>
             </div>
 
-            <v-img  class="actualizar_icon" width="1500" height="70"  src="../assets/img/actualizar.png"></v-img>
+            <v-img  class="actualizar_icon" width="1500" height="80"  src="../assets/img/actualizar.png"></v-img>
             <v-divider :thickness="1"class="linea border-opacity-100"></v-divider>
 
             <v-text class="nombre">Nombres:</v-text>
@@ -40,7 +40,7 @@
                 <span class="condi">Condición de</span>
                 <span class="estu">Estudiante:</span>
             </v-text>
-            <v-text class="interes">Interess:</v-text>
+            <v-text class="interes">Interes:</v-text>
             <v-text class="nivel">Nivel Académico:</v-text>
             <v-text class="habimate">
                 <span class="habili">Habilidad en</span>
@@ -53,7 +53,7 @@
 
             <v-text-field
                 class="nombretext"
-                label="Ingrese su Nombre"
+                placeholder="Ingresa su Nombre"
                 variant="solo"
                 rounded="xl">
             </v-text-field>
@@ -62,11 +62,14 @@
                 chips
                 :items="['Masculino', 'Femenino']"
                 variant="solo"
-                rounded="xl">
+                rounded="xl"
+                placeholder="Seleccione su Género"
+                >
+                
             </v-select>
             <v-text-field
                 class="edadtxt"
-                label="Ingrese su edad"
+                placeholder="Ingresa su edad"
                 variant="solo"
                 rounded="xl">
             </v-text-field>
@@ -75,43 +78,47 @@
                 chips
                 :items="['Principiante', 'Intermedio','Avanzado']"
                 variant="solo"
-                rounded="xl">
+                rounded="xl"
+                placeholder="Seleccione su habilidad">
             </v-select>
             <v-select
                 class="parti_tectxt"
                 chips
                 :items="['Si', 'No']"
                 variant="solo"
-                rounded="xl">
+                rounded="xl"
+                placeholder="Seleccione su Participación">
             </v-select>
             <v-select
                 class="habilidadestxt"
-                label="Habilidades blandas"
                 variant="solo"
                 chips
                 :items="['Trabajo en equipo', 'Comunicación efectiva', 'Gestión del tiempo', 'Resolución de conflictos', 'Creatividad', 'Adaptabilidad', 'Liderazgo', 'Resolución de problemas', 'Pensamiento crítico', 'Aprendizaje rápido']"
-                rounded="xl">
+                multiple
+                rounded="xl"
+                placeholder="Seleccione su Habilidad">
             </v-select>
 
             <v-text-field
                 class="graducaciontxt"
-                label=""
                 variant="solo"
-                rounded="xl">
+                rounded="xl"
+                placeholder="Ingrese su Año de Graduación">
             </v-text-field>
 
             <v-text-field
                 class="carrerastxt"
-                label=""
                 variant="solo"
-                rounded="xl">
+                rounded="xl"
+                placeholder="Ingrese su Ciclo actual">
             </v-text-field>
 
             <v-text-field
                 class="notapromediotxt"
                 label=""
                 variant="solo"
-                rounded="xl">
+                rounded="xl"
+                placeholder="Ingrese su nota promedio">
             </v-text-field>
             
             <v-select
@@ -119,31 +126,32 @@
                 chips
                 :items="['Cursando', 'Egresado']"
                 variant="solo"
-                rounded="xl">
+                rounded="xl"
+                placeholder="Seleccione su Condición">
             </v-select>
             <v-select
                 class="interestxt"
-                label="Intereses"
                 variant="solo"
                 chips
                 :items="['Desarrollo de aplicaciones web modernas', 'UI/UX Design', 'Machine Learning', 'Desarrollo de videojuegos', 'Diseño de páginas web', 'Desarrollo de aplicaciones empresariales', 'Gestión de proyectos', 'Desarrollo de aplicaciones web dinámicas', 'Diseño de interfaces intuitivas', 'Desarrollo de aplicaciones móviles', 'Seguridad informática', 'Bases de datos', 'Experiencia de usuario', 'Análisis forense digital', 'Implementación de microservicios con Kubernetes','Diseño de arquitecturas de sistemas distribuidos']"
-                multiple rounded="xl">
+                multiple rounded="xl"
+                placeholder="Seleccione su Intereses">
             </v-select >
             <v-select
                 class="nivelaca"
-                label="Nivel Académico"
                 variant="solo"
                 chips
                 :items="['Estudiante','Graduado','Universitario']"
-                rounded="xl">
+                rounded="xl"
+                placeholder="Seleccione su Nivel">
             </v-select>
             <v-select
                 class="habilidadmate"
-                label="Habilidad Matemáticas"
                 variant="solo"
+                chips
                 :items="['Principiante', 'Intermedio','Avanzanddo']"
-                multiple
-                rounded="xl">
+                rounded="xl"
+                placeholder="Seleccione su Habilidad">
             </v-select>
             
             <v-select
@@ -202,15 +210,15 @@
 .actualizarinfo_icon {
     top:-30px;
     padding-bottom: 10px;
-    margin-left: 40px;
+    margin-left: 60px;
     right: 20%;
 }
 .titulo {
     display: flex;
     align-items: flex-start;
     position: absolute;
-    left:35%;
-    top: 11.8%;
+    left:34%;
+    top: 10.8%;
     color: white;
     
 }

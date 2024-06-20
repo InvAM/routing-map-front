@@ -12,7 +12,6 @@
             <h1 class="text">INFORMACIÓN DEL USUARIO</h1>
         </div>
         <v-img class="reporentre_icon" src="../assets/img/reporentre.png"></v-img>
-
         <v-divider :thickness="1"class="linea border-opacity-100"></v-divider>
         <div class="caja1">
             <v-text-field
@@ -103,6 +102,15 @@
                 >PREDECIR RUTA
             </v-btn>
         </v-card>
+        <v-card
+        class="prediccion-card"
+            elevation="2" 
+            color="rgba(146, 139, 139, 0.85)" 
+            width="800" 
+            height="800">
+            
+
+        </v-card>
         </v-form>
     </div>
 </template>
@@ -112,8 +120,13 @@
 .login-card {
     border-radius: 18px; /* Rounded corners */
     padding: 30px; /* Padding inside the card */
-    left:29%;	
+    left:5%;	
     margin-top:70px;
+}
+.prediccion-card{
+    border-radius: 18px;
+    left: 52%;
+    top: -784px;
 }
 
 .contenido {
