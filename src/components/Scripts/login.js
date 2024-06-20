@@ -26,8 +26,8 @@ export default {
 		cerrar() {
 			this.dialogError = false;
 		},
-		crear_cuenta() {
-			this.$router.push("/crearcuenta");
+		olvidaste_contra() {
+			this.$router.push("/recucontrauser");
 		},
 		obtenerCredenciales() {
 			axios

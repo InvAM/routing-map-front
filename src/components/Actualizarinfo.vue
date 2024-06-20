@@ -1,6 +1,6 @@
 
 <template>
-    <div class="contenido">
+    <div class="fondo_actualizar">
             <v-form class="cuadro2" fast-fail @submit.prevent>
             <v-card
             class="actualizarinfo-card"
@@ -13,7 +13,7 @@
             <h1 class="text">ACTUALIZAR INFORMACIÓN</h1>
             </div>
 
-            <v-img  class="actualizar_icon" width="1500" height="80"  src="../assets/img/actualizar.png"></v-img>
+            <v-img  class="actualizar_icon" width="1500" height="70"  src="../assets/img/actualizar.png"></v-img>
             <v-divider :thickness="1"class="linea border-opacity-100"></v-divider>
 
             <v-text class="nombre">Nombres:</v-text>
@@ -40,7 +40,7 @@
                 <span class="condi">Condición de</span>
                 <span class="estu">Estudiante:</span>
             </v-text>
-            <v-text class="interes">Interes:</v-text>
+            <v-text class="interes">Interess:</v-text>
             <v-text class="nivel">Nivel Académico:</v-text>
             <v-text class="habimate">
                 <span class="habili">Habilidad en</span>
@@ -79,7 +79,7 @@
                 :items="['Principiante', 'Intermedio','Avanzado']"
                 variant="solo"
                 rounded="xl"
-                placeholder="Seleccione su habilidad">
+                placeholder="Seleccione su Nivel">
             </v-select>
             <v-select
                 class="parti_tectxt"
@@ -93,18 +93,17 @@
                 class="habilidadestxt"
                 variant="solo"
                 chips
+                placeholder="Seleccione sus Habilidades"
                 :items="['Trabajo en equipo', 'Comunicación efectiva', 'Gestión del tiempo', 'Resolución de conflictos', 'Creatividad', 'Adaptabilidad', 'Liderazgo', 'Resolución de problemas', 'Pensamiento crítico', 'Aprendizaje rápido']"
-                multiple
                 rounded="xl"
-                placeholder="Seleccione su Habilidad">
+                multiple>
             </v-select>
 
             <v-text-field
                 class="graducaciontxt"
                 variant="solo"
                 rounded="xl"
-                placeholder="Ingrese su Año de Graduación">
-            </v-text-field>
+                placeholder="Ingrese su Año de Graduación">     </v-text-field>
 
             <v-text-field
                 class="carrerastxt"
@@ -151,7 +150,7 @@
                 chips
                 :items="['Principiante', 'Intermedio','Avanzanddo']"
                 rounded="xl"
-                placeholder="Seleccione su Habilidad">
+                placeholder="Seleccione su Nivel">
             </v-select>
             
             <v-select
@@ -180,7 +179,8 @@
                 width="290" 
                 height="52"
                 color="rgba(236, 100, 82, 1)"
-                >HOME
+                @click="regresar"
+						>Atras <v-icon>mdi-arrow-left</v-icon>
             </v-btn>
             </v-card>
         </v-form>
@@ -196,7 +196,7 @@
 
     margin-top:40px;
 }
-.contenido {
+.fondo_actualizar {
     /* Puedes ajustar las propiedades según tus necesidades */
     background-image: url("../assets/img/fondofinal.jpg");
     background-size: cover;
@@ -207,18 +207,18 @@
     top: 0;
     left: 0;
 }
-.actualizarinfo_icon {
-    top:-30px;
+.actualizar_icon {
+    top:-5px;
     padding-bottom: 10px;
-    margin-left: 60px;
+    margin-left: 40px;
     right: 20%;
 }
 .titulo {
     display: flex;
     align-items: flex-start;
     position: absolute;
-    left:34%;
-    top: 10.8%;
+    left:35%;
+    top: 11.8%;
     color: white;
     
 }
@@ -522,9 +522,4 @@
 
 </style>
 
-<script>
-export default {
-    name: 'Actualizarinfo',
-};
-
-</script>
+<script src="./Scripts/ActualizarInfo.js"></script>

@@ -58,17 +58,6 @@
                 <span class="btn-text">RECUPERAR CONTRASEÑA</span>
                 </v-btn>
 
-                <v-btn
-                class="btn-repo"
-                rounded="ini"
-                width="350" 
-                height="150"
-                color="rgba(217, 217, 217, 1)"
-                @click="repo"
-                >
-                    <v-img class="home-icon" src="../assets/img/reporte.png"></v-img>
-                    <span class="btn-text">REPORTES</span>
-                </v-btn>
 
 		    </v-card>
         </v-form>
@@ -96,15 +85,15 @@
         left:-10px;	
 }
 .btn-login{
-    left: 120px;
-    top: 130px;
+    left: 303px;
+    top: 147px;
     border-radius: 20px; /* Rounded corners */
 
 }
 
 .btn-actualizar{
-    left: 140px;
-    top: 130px;
+    left: 330px;
+    top: 147px;
     border-radius: 20px; /* Rounded corners */
 
 }
@@ -112,15 +101,15 @@
 
 
 .btn-predic{
-    left: 160px;
-    top: 130px;
+    left: -19px;
+    top: 322px;
     border-radius: 20px; /* Rounded corners */
 
 }
 
 .btn-recucontra{
-    left: 300px;
-    top: 155px;
+    left: 303px;
+    top: 174px;
     border-radius: 20px; /* Rounded corners */
 
 }

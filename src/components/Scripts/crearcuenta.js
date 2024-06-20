@@ -4,6 +4,6 @@ export default {
 	name: "HelloWorld",
 	data: () => ({
     
-  }),
+}),
 	methods: {},
 };

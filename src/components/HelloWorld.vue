@@ -14,7 +14,7 @@
 						<v-btn  
 						class="btn-olvidaste" 
 						block 
-						@click="crear_cuenta"
+						@click="olvidaste_contra"
 						elevation="0">
 						¿Olvidaste tu contraseña?</v-btn>
 					</v-card>

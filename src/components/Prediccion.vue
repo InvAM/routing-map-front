@@ -101,6 +101,17 @@
                 color="rgba(27, 18, 83, 1)"
                 >PREDECIR RUTA
             </v-btn>
+            <v-btn
+                density="compact"
+                elevation="20"
+                class="btn-atraas"
+                type="submit"
+				width="290px"
+				height="52px"
+                color="rgba(236, 100, 82, 1)"
+                @click="regresar3"
+						>Atras <v-icon>mdi-arrow-left</v-icon></v-btn>
+            
         </v-card>
         <v-card
         class="prediccion-card"
@@ -171,8 +182,16 @@
 }
 
 .btn-reentrenar{
-    left: 30%;
+    left: 8%;
     top:28px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn-atraas{
+    left: 12%;
+    top: 27px;
     border-radius: 15px;
     font-size: 16px;
     font-weight: bold;
@@ -240,12 +259,10 @@
 .rounded{
     border-radius: 16px;
 }
+
 </style>
 
 
-<script>
-export default {
-    name: 'Prediccion',
-};
+<script src="./Scripts/Prediccion.js">
 
 </script>
