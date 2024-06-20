@@ -19,8 +19,6 @@
         </v-form>
     </div>
   </template>
-  
-  
   <style scoped>
   
   .login-card {

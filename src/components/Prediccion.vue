@@ -52,7 +52,7 @@
                 variant="solo"
                 chips
                 :items="['Trabajo en equipo', 'Comunicación efectiva', 'Gestión del tiempo', 'Resolución de conflictos', 'Creatividad', 'Adaptabilidad', 'Liderazgo', 'Resolución de problemas', 'Pensamiento crítico', 'Aprendizaje rápido']"
-                rounded="xl">
+                multiple rounded="xl">
             </v-select>
             <v-select
                 class="nivel"
@@ -67,7 +67,6 @@
                 label="Habilidad Matemáticas"
                 variant="solo"
                 :items="['Principiante', 'Intermedio','Avanzanddo']"
-                multiple
                 rounded="xl">
             </v-select>
             <v-text-field

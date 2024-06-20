@@ -11,8 +11,12 @@
 							@click:append="show1 = !show1"></v-text-field>
 						<v-btn density="compact" size="large" rounded="xl" elevation="20" class="mt-2" type="submit"
 							color="#821902" @click="iniciarSesion" block>Ingresar</v-btn>
-						<v-btn density="compact" size="large" rounded="xl" elevation="20" class="mt-2" type="submit"
-							color="#821902" block @click="crear_cuenta">Crear Cuenta Nueva</v-btn>
+						<v-btn  
+						class="btn-olvidaste" 
+						block 
+						@click="crear_cuenta"
+						elevation="0">
+						¿Olvidaste tu contraseña?</v-btn>
 					</v-card>
 					<v-row v-if="mensajeError" align="center">
 						<v-col cols="12">
@@ -24,7 +28,7 @@
 				</v-form>
 			</div>
 			<div class="titulo">
-				<h1>BIENVENIDO(A) A</h1>
+				<h1>BIENVENIDO A</h1>
 			</div>
 			<div class="login-image">
 				<v-img src="../assets/img/logoSI.png"></v-img>
@@ -53,9 +57,12 @@
 	display: flex;
 	align-items: flex-start;
 	position: absolute;
-	left: 56%;
-	top: 25%;
+	left: 56.2%;
+	top: 29%;
 	color: white;
+	font-size: 18px;;
+	width: bold;
+	font-family:'Arial Black';
 }
 
 body,
@@ -69,7 +76,7 @@ html {
 }
 
 .fondo_login {
-	background-image: url("../assets/img/Fondo_2.jpg");
+	background-image: url("../assets/img/fondolouser.png");
 	background-size: cover;
 	background-position: center;
 	position: fixed;
@@ -107,16 +114,30 @@ html {
 	margin-top: 35px;
 }
 
+.btn-olvidaste{
+	background-color: transparent !important; /* Elimina el fondo */
+	box-shadow: none; /* Elimina la sombra */
+	color: inherit; /* Mantiene el color del texto */
+	font-size: 12px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+	top:15px;
+
+}
 .login-card {
 	width: 100%;
 	border-radius: 30px;
 	/* Rounded corners */
 	padding: 30px;
+	top: 15px;
 	/* Padding inside the card */
 }
 
 .v-img {
-	max-width: 100%;
+	left: 10px;
+	width: 400px;
+	top: -3%;
+
 }
 </style>
 <script src="./Scripts/login.js"></script>
