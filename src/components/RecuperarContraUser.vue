@@ -6,12 +6,12 @@
 				justify-content: center;
 				align-items: center;
 				flex-direction: column;
-                margin-right: 5%;
+                margin-right: 2%;
 			">
 			<v-icon
 				style="
 					background-color:rgba(146, 139, 139, 0.85);
-					width: 820px;
+					width: 680px;
 					height: 100px;
 					border-top-left-radius: 50px;
 					border-top-right-radius: 50px;
@@ -21,14 +21,14 @@
 			<div
 				style="
 					background-color:rgba(146, 139, 139, 0.85);
-					width: 820px;
+					width: 680px;
 					border-bottom-left-radius: 50px;
 					border-bottom-right-radius: 50px;
 					margin-top: 0px;
 				">
 				<h1
 					style="text-align: center; margin-top: -6.5px; color: white"
-					class="titulo">
+					class="titulo1">
 					RECUPERAR CONTRASEÑA
 				</h1>
 				<v-divider
@@ -87,7 +87,7 @@
 				<template v-slot:default="{ isHovering, props }">
 					<v-btn
                         class="btn-aceptar"
-                        height="40"
+                        height="45"
 						@click="updatePassword"
 						style="align-self: center; margin-top: -50px"
 						v-bind="props"
@@ -96,11 +96,10 @@
 					>
 					<v-btn
                 density="compact"
-                elevation="20"
                 class="btn-atraas"
                 type="submit"
-				width="250px"
-				height="42px"
+				width="120px"
+				height="45px"
                 color="rgba(236, 100, 82, 1)"
                 @click="regresar2"
 						>Atras <v-icon>mdi-arrow-left</v-icon></v-btn>
@@ -126,20 +125,23 @@
     left: 0;
 	}
 
-    .titulo {
+    .titulo1 {
     display: flex;
     align-items: flex-start;
     position: absolute;
-    left:40.5%;
-    top: 27%;
+    left:41.8%;
+    top: 26.8%;
     color: white;
+	font-size: 19px;
+	width: bold;
+	font-family:'Arial Black';
 }
 
 .usuario{
     color: white;
     width: 400px;
     height: 110px;
-    margin-left: 26%;
+    margin-left: 22%;
     margin-top: 18px;
 }
 
@@ -148,14 +150,14 @@
     color: white;
     width: 400px;
     height: 130px;
-    margin-left: 26%;
+    margin-left: 22%;
 }
 .contra2{
     margin-top:-11px;
     color: white;
     width: 400px;
     height: 130px;
-    margin-left: 26%;
+    margin-left: 22%;
 }
 
 	.custom-text-field .v-messages__message {
@@ -174,21 +176,20 @@
 
 
 .btn-aceptar{
-    top: -10px;
-    
-    left: -120px;
+    top: -14px;
+    left: -50px;
     border-radius: 12px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
 .btn-atraas{
 	border-radius: 15px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    left: 20%;
-    top:-53px;
+    left: 21.4%;
+    top:-60px;
 	
 }
 

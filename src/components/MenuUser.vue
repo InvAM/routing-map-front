@@ -18,8 +18,9 @@
                 color="rgba(217, 217, 217, 1)"
                 @click="login"
                 >
-                <v-img class="home-icon" src="../assets/img/home.png"></v-img>
+                
                 <span class="btn-text">LOGIN</span>
+                <v-img class="home-icon" src="../assets/img/home.png"></v-img>
                 </v-btn>
                 
                 <v-btn
@@ -30,8 +31,9 @@
                 color="rgba(217, 217, 217, 1)"
                 @click="actualizarinf"
                 >
-                <v-img class="home-icon" src="../assets/img/actualizar.png"></v-img>
                 <span class="btn-text">ACTUALIZAR INFORMACIÓN</span>
+                <v-img class="home-icon" src="../assets/img/menuactualizar.png"></v-img>
+
                 </v-btn>
 
                 <v-btn
@@ -42,8 +44,9 @@
                 color="rgba(217, 217, 217, 1)"
                 @click="predic"
                 >
-                <v-img class="home-icon" src="../assets/img/prediccion.png"></v-img>
                 <span class="btn-text">PREDICCIÓN</span>
+                <v-img class="home-icon" src="../assets/img/prediccion.png"></v-img>
+
                 </v-btn>
 
                 <v-btn
@@ -54,8 +57,9 @@
                 color="rgba(217, 217, 217, 1)"
                 @click="recuperarContraseña"
                 >
-                <v-img class="home-icon" src="../assets/img/recucontra.png"></v-img>
                 <span class="btn-text">RECUPERAR CONTRASEÑA</span>
+                <v-img class="home-icon" src="../assets/img/recucontra.png"></v-img>
+
                 </v-btn>
 
 
@@ -87,14 +91,14 @@
 .btn-login{
     left: 303px;
     top: 147px;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 30px; /* Rounded corners */
 
 }
 
 .btn-actualizar{
     left: 330px;
     top: 147px;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 30px; /* Rounded corners */
 
 }
 
@@ -103,14 +107,14 @@
 .btn-predic{
     left: -19px;
     top: 322px;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 30px; /* Rounded corners */
 
 }
 
 .btn-recucontra{
     left: 303px;
     top: 174px;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 30px; /* Rounded corners */
 
 }
 
@@ -124,12 +128,12 @@
 .btn-repo{
     left: 320px;
     top: 155px;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 30px; /* Rounded corners */
 
 }
 
 .home-icon {
-  width: 65px;
+  width: 45px;
   padding-bottom: 23px;
 }
 
