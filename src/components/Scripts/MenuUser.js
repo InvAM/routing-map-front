@@ -1,23 +1,37 @@
 export default {
 	name: "MenuUser",
 	data: () => ({}),
-    methods:{
-        login(){
-            this.$router.push("/")
-        },
-        
-        recuperarContraseña(){
-            this.$router.push("/recucontrauser")
-        },
+	mounted() {
+		this.verificacionLogin();
+	},
+	methods: {
+		login() {
+			localStorage.clear();
+			sessionStorage.clear();
+			this.$router.push("/");
+		},
 
-        actualizarinf(){
-            this.$router.push("/actualizarinfo")
+		recuperarContraseña() {
+			this.$router.push("/recucontrauser");
+		},
 
-        },
-        predic(){
-            this.$router.push("/prediccion")
-
-        },
-
-    }
+		actualizarinf() {
+			this.$router.push("/actualizarinfo");
+		},
+		predic() {
+			this.$router.push("/prediccion");
+		},
+		logout() {
+			localStorage.clear();
+			sessionStorage.clear();
+			this.$router.push("/");
+		},
+		verificacionLogin() {
+			const userid = localStorage.getItem("userId");
+			const username = localStorage.getItem("username");
+			if (!userid && !username) {
+				this.$router.push("/");
+			}
+		},
+	},
 };

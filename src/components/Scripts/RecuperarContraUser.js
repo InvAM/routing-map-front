@@ -26,7 +26,7 @@ export default {
 					password: this.password
 				};
 		
-				axios.patch(`http://localhost:3000/users/${userId}`, data)
+				axios.patch(`http://localhost:3000/credenciales/${userId}`, data)
 					.then(() => {
 						alert('Contraseña actualizada correctamente');
 					})
