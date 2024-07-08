@@ -81,7 +81,7 @@ export default {
 					localStorage.setItem("userId", user.IDUser);
 					localStorage.setItem("username", user.username);
 
-					this.$router.push("/menu");
+					this.$router.push("/menuuser");
 				} catch (error) {
 					if (error.response.data.errors) {
 						const errors = error.response.data.errors;

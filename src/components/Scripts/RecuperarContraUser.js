@@ -39,7 +39,7 @@ export default {
 			}
 		},
 		regresar2() {
-			this.$router.push("/");
+			this.$router.push("/menuuser");
 		}
 		
 	},

@@ -503,148 +503,206 @@
 		</div>
 		<div v-if="isLoadingD">
 			<v-card
-				class="prediccion-card"
+				class="prediccion-card pa-4"
 				elevation="2"
 				color="rgba(146, 139, 139, 0.85)"
-				width="800"
+				width="880"
 				height="800">
-				<div class="info-container" style="padding: 20px;">
-					<v-card >
-						<v-card-title>Datos Analizados</v-card-title>
-						<v-card-text>
-							<v-list>
-								<v-list-item>
-									<v-list-item-content>
-										<v-list-item-title>Edad</v-list-item-title>
-										<v-list-item-subtitle>{{
-											this.infoPrediccion.datos_nuevos[0].edad
-										}}</v-list-item-subtitle>
-									</v-list-item-content>
-								</v-list-item>
-								<v-list-item>
-									<v-list-item-content>
-										<v-list-item-title>Nivel Académico</v-list-item-title>
-										<v-list-item-subtitle>{{
-											this.infoPrediccion.datos_nuevos[0].nivel_academico
-										}}</v-list-item-subtitle>
-									</v-list-item-content>
-								</v-list-item>
-								<v-list-item>
-									<v-list-item-content>
-										<v-list-item-title
-											>Habilidad Programación</v-list-item-title
-										>
-										<v-list-item-subtitle>{{
-											this.infoPrediccion.datos_nuevos[0].habilidad_programacion
-										}}</v-list-item-subtitle>
-									</v-list-item-content>
-								</v-list-item>
-								<v-list-item>
-									<v-list-item-content>
-										<v-list-item-title>Habilidad Matemática</v-list-item-title>
-										<v-list-item-subtitle>{{
-											this.infoPrediccion.datos_nuevos[0].habilidad_matematicas
-										}}</v-list-item-subtitle>
-									</v-list-item-content>
-								</v-list-item>
-								<v-list-item>
-									<v-list-item-content>
-										<v-list-item-title
-											>Participa en Club de Tecnología</v-list-item-title
-										>
-										<v-list-item-subtitle>{{
-											this.infoPrediccion.datos_nuevos[0]
-												.participacion_club_tecnologia
-												? "Sí"
-												: "No"
-										}}</v-list-item-subtitle>
-									</v-list-item-content>
-								</v-list-item>
-								<v-list-item>
-									<v-list-item-content>
-										<v-list-item-title>Nota Promedio</v-list-item-title>
-										<v-list-item-subtitle>{{
-											this.infoPrediccion.datos_nuevos[0].nota_promedio
-										}}</v-list-item-subtitle>
-									</v-list-item-content>
-								</v-list-item>
-								<v-list-item>
-									<v-list-item-content>
-										<v-list-item-title>Condición Estudiante</v-list-item-title>
-										<v-list-item-subtitle>{{
-											this.infoPrediccion.datos_nuevos[0].condicion_estudiante
-										}}</v-list-item-subtitle>
-									</v-list-item-content>
-								</v-list-item>
-								<v-list-item>
-									<v-list-item-content>
-										<v-list-item-title
-											>Conocimiento de Lenguajes</v-list-item-title
-										>
-										<v-list-item-subtitle>
-											<v-chip
-												v-for="(lenguaje, index) in this.infoPrediccion
-													.datos_nuevos[0].conocimiento_lenguajes"
-												:key="index"
-												color="primary"
-												text-color="white"
-												label>
-												{{ lenguaje }}
-											</v-chip>
-										</v-list-item-subtitle>
-									</v-list-item-content>
-								</v-list-item>
-								<v-list-item>
-									<v-list-item-content>
-										<v-list-item-title>Habilidades Blandas</v-list-item-title>
-										<v-list-item-subtitle>
-											<v-chip
-												v-for="(habilidad, index) in this.infoPrediccion
-													.datos_nuevos[0].habilidades_blandas"
-												:key="index"
-												color="primary"
-												text-color="white"
-												label>
-												{{ habilidad }}
-											</v-chip>
-										</v-list-item-subtitle>
-									</v-list-item-content>
-								</v-list-item>
-								<v-list-item>
-									<v-list-item-content>
-										<v-list-item-title>Intereses</v-list-item-title>
-										<v-list-item-subtitle>
-											<v-chip
-												v-for="(interes, index) in this.infoPrediccion
-													.datos_nuevos[0].intereses"
-												:key="index"
-												color="primary"
-												text-color="white"
-												label>
-												{{ interes }}
-											</v-chip>
-										</v-list-item-subtitle>
-									</v-list-item-content>
-								</v-list-item>
-							</v-list>
-						</v-card-text>
-					</v-card>
-					<v-card style="margin-top: 10px;">
-						<v-card-title>Predicción</v-card-title>
-						<v-card-text>
-							<v-list>
-								<v-list-item>
-									<v-list-item-content>
-										<v-list-item-title>Predicción</v-list-item-title>
-										<v-list-item-subtitle>{{
-											this.infoPrediccion.predicciones[0]
-										}}</v-list-item-subtitle>
-									</v-list-item-content>
-								</v-list-item>
-							</v-list>
-						</v-card-text>
-					</v-card>
-				</div>
+				<v-row>
+					<!-- Columna para la información del usuario -->
+					<v-col cols="12" sm="6">
+						<v-card>
+							<v-card-title>{{ infoPrediccion[0].ruta }}</v-card-title>
+							<v-card-subtitle
+								>Tipo: {{ infoPrediccion[0].tipo }}</v-card-subtitle
+							>
+							<v-card-text>
+								<v-list>
+									<v-list-item>
+										<v-list-item-content>
+											<v-list-item-title class="font-weight-bold"
+												>Edad</v-list-item-title
+											>
+											<v-list-item-subtitle>{{
+												selectedUser.Edad
+											}}</v-list-item-subtitle>
+										</v-list-item-content>
+									</v-list-item>
+									<v-list-item>
+										<v-list-item-content>
+											<v-list-item-title class="font-weight-bold"
+												>Nivel Académico</v-list-item-title
+											>
+											<v-list-item-subtitle>{{
+												selectedUser.desNivelA
+											}}</v-list-item-subtitle>
+										</v-list-item-content>
+									</v-list-item>
+									<v-list-item>
+										<v-list-item-content>
+											<v-list-item-title class="font-weight-bold"
+												>Habilidad Programación</v-list-item-title
+											>
+											<v-list-item-subtitle>{{
+												selectedUser.habilidadesprg
+											}}</v-list-item-subtitle>
+										</v-list-item-content>
+									</v-list-item>
+									<v-list-item>
+										<v-list-item-content>
+											<v-list-item-title class="font-weight-bold"
+												>Habilidad Matemática</v-list-item-title
+											>
+											<v-list-item-subtitle>{{
+												selectedUser.habilidadesmat
+											}}</v-list-item-subtitle>
+										</v-list-item-content>
+									</v-list-item>
+									<v-list-item>
+										<v-list-item-content>
+											<v-list-item-title class="font-weight-bold"
+												>Nota Promedio</v-list-item-title
+											>
+											<v-list-item-subtitle>{{
+												selectedUser.nota_promedio
+											}}</v-list-item-subtitle>
+										</v-list-item-content>
+									</v-list-item>
+									<v-list-item>
+										<v-list-item-content>
+											<v-list-item-title class="font-weight-bold"
+												>Condición Estudiante</v-list-item-title
+											>
+											<v-list-item-subtitle>{{
+												selectedUser.condicion
+											}}</v-list-item-subtitle>
+										</v-list-item-content>
+									</v-list-item>
+									<v-list-item>
+										<v-list-item-content>
+											<v-list-item-title class="font-weight-bold"
+												>Conocimiento de Lenguajes</v-list-item-title
+											>
+											<v-list-item-subtitle>
+												<v-chip
+													v-for="(lenguaje, index) in selectedUser.lenguaje"
+													:key="index"
+													color="primary"
+													text-color="white"
+													label
+													class="mr-2"
+													>{{ lenguaje }}</v-chip
+												>
+											</v-list-item-subtitle>
+										</v-list-item-content>
+									</v-list-item>
+									<v-list-item>
+										<v-list-item-content>
+											<v-list-item-title class="font-weight-bold"
+												>Habilidades Blandas</v-list-item-title
+											>
+											<v-list-item-subtitle>
+												<v-chip
+													v-for="(
+														habilidad, index
+													) in selectedUser.habilidadesbla"
+													:key="index"
+													color="primary"
+													text-color="white"
+													label
+													class="mr-2"
+													>{{ habilidad }}</v-chip
+												>
+											</v-list-item-subtitle>
+										</v-list-item-content>
+									</v-list-item>
+									<v-list-item>
+										<v-list-item-content>
+											<v-list-item-title class="font-weight-bold"
+												>Intereses</v-list-item-title
+											>
+											<v-list-item>
+												<v-chip
+													v-for="(interes, index) in selectedUser.interes"
+													:key="index"
+													color="primary"
+													text-color="white"
+													label
+													class="mr-2 mt-2"
+													>{{ interes }}</v-chip
+												>
+											</v-list-item>
+										</v-list-item-content>
+									</v-list-item>
+								</v-list>
+							</v-card-text>
+						</v-card>
+					</v-col>
+
+					<!-- Columna para la sección de predicción -->
+					<v-col cols="12" sm="6">
+						<v-card>
+							<v-card-title>Predicción</v-card-title>
+							<v-card-text>
+								<v-list>
+									<v-list-item style="margin-bottom: 10px;">
+										<v-list-item-content>
+											<v-list-item-title class="font-weight-bold"
+												>Lenguaje Recomendado</v-list-item-title
+											>
+											<v-list-item-subtitle>{{
+												infoPrediccion[0].tecnologias["Lenguaje Recomendado"]
+											}}</v-list-item-subtitle>
+										</v-list-item-content>
+									</v-list-item>
+									<v-divider></v-divider>
+									<v-list-item>
+										<v-list-item-content>
+											<v-list-item-title class="font-weight-bold"
+												>Tecnologías</v-list-item-title
+											>
+											<v-list-item style="margin-bottom: 10px;">
+												<v-chip
+													v-for="(tech, index) in infoPrediccion[0].tecnologias[
+														'Tecnologías'
+													]"
+													:key="index"
+													color="primary"
+													text-color="white"
+													label
+													class="mr-2 mt-2"
+													>{{ tech }}</v-chip
+												>
+											</v-list-item >
+										</v-list-item-content>
+									</v-list-item>
+									<v-divider></v-divider>
+									<v-list-item>
+										<v-list-item-content>
+											<v-list-item-title class="font-weight-bold"
+												>Temas de Programación</v-list-item-title
+											>
+											<v-list-item style="margin-bottom: 10px;">
+												<v-chip
+													v-for="(tema, key) in infoPrediccion[0].tecnologias[
+														'Temas de Programación'
+													]"
+													:key="key"
+													color="primary"
+													text-color="white"
+													label
+													style="white-space: normal; max-width: 100%;height: 65px;"
+													class="mt-2"
+													>{{ key }}: {{ tema }}</v-chip
+												>
+											</v-list-item>
+										</v-list-item-content>
+									</v-list-item>
+								</v-list>
+							</v-card-text>
+						</v-card>
+					</v-col>
+				</v-row>
 			</v-card>
 		</div>
 	</div>

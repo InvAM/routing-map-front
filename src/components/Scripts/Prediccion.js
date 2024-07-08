@@ -194,7 +194,7 @@ export default {
 					);
 					const prediccion_res = predeccion_send.data;
 					this.infoPrediccion = prediccion_res;
-					console.log(this.infoPrediccion);
+					console.log("Prediccion",this.infoPrediccion);
 				}
 			} catch (error) {
 				console.error("Error al obtener la predicción:", error);
